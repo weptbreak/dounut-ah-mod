@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "donut_ah_profit",
+  "version": "${version}",
+  "name": "Donut AH Profit",
+  "description": "Client-side tooltip overlay for the Donut SMP auction house: market value, suggested resell price and expected profit.",
+  "authors": ["you"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.donutahprofit.DonutAhProfitClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": ">=1.21 <1.21.2",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
