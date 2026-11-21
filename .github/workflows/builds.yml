@@ -5,6 +5,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: donut-ah-profit
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -14,8 +17,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 9.2.1
+          build-root-directory: donut-ah-profit
       - run: gradle build
       - uses: actions/upload-artifact@v4
         with:
           name: donut-ah-profit-jar
-          path: build/libs/*.jar
+          path: donut-ah-profit/build/libs/*.jar
